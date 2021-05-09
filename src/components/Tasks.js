@@ -23,7 +23,9 @@ const Tasks = ({ tasks, onDelete, onToggle }) => {
 }
 
 Tasks.propTypes = {
-    tasks: PropTypes.array.isRequired
+    tasks: PropTypes.array.isRequired,
+    onDelete: PropTypes.func.isRequired,
+    onToggle: PropTypes.func.isRequired
 }
 
 export default Tasks
