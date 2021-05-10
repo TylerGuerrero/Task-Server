@@ -10,7 +10,8 @@ const Header = ({ title, onAdd, showAdd }) => {
             <h1>{ title }</h1>
             {location.pathname === '/' && 
             <Button color={showAdd ? "red": "green"}
-            text={showAdd ? "close" : "add"} onClick={onAdd}/>}
+            text={showAdd ? "close" : "add"} 
+            onClick={onAdd}/>}
         </header>
     )
 }
@@ -22,7 +23,9 @@ const Header = ({ title, onAdd, showAdd }) => {
 // }
 
 Header.propTypes = {
-    title: PropTypes.string.isRequired
+    title: PropTypes.string.isRequired,
+    onAdd: PropTypes.func.isRequired,
+    showAdd: PropTypes.bool.isRequired
 }
 
 export default Header
